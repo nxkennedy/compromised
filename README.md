@@ -11,7 +11,8 @@ Check list of usernames, email addresses, or phone numbers to determine if they 
 
 1. ruby >= 2.4.0 
 2. Install the following 3 gems:
-    `gem install paint progress_bar PwnedCheck 
+
+    `gem install paint progress_bar PwnedCheck` 
 
 ## Usage
 
@@ -19,6 +20,10 @@ Check list of usernames, email addresses, or phone numbers to determine if they 
 
 ## Output
 ### Terminal
+I wanted the output formatted in a Private Investigator theme. Here's what the output means in plain English:
+* "ASSOCIATED WITH ILLICIT ACTIVITY" = Found in at least one confirmed breach
+* "CLEARED OF SUSPICION" = Not found in any confirmed breaches
+* "BAD LEADS" = Errors raised due to misformatted input
 
 !['compromised' script terminal screenshot](screenshots/compromised_investigation-output.png)
 
