@@ -31,7 +31,7 @@ Check list of usernames, email addresses, or phone numbers to determine if they 
 
 ## Usage
 
-    `ruby compromised_investigation.rb <email-list.csv>`
+     ruby compromised_investigation.rb <email-list.csv>
 
 ## Output
 Output is shown in the terminal as well as written to CSV. Output formats can be seen below.
