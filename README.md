@@ -3,6 +3,21 @@
 
 This script checks the http://haveibeenpwned.com database for accounts compromised in PUBLICLY RELEASED breaches. Further API documentation can be found at: https://haveibeenpwned.com/API/v2. Based on the PwnedCheck gem and sample script written by Carl Sampson http://github.com/sampsonc/PwnedCheck
 
+<table>
+    <tr>
+        <th>Version</th>
+        <td>1.0.0</td>
+    </tr>
+    <tr>
+       <th>Author</th>
+       <td>Nolan Kennedy
+    </tr>
+    <tr>
+        <th>Github</th>
+        <td><a href="http://github.com/nxkennedy/compromised">http://github.com/nxkennedy/compromised</a></td>
+    </tr>
+</table>
+
 ## Use Case
 
 Check list of usernames, email addresses, or phone numbers to determine if they were compromised in a breach
@@ -19,8 +34,10 @@ Check list of usernames, email addresses, or phone numbers to determine if they 
     $ ruby compromised_investigation.rb <email-list.csv>
 
 ## Output
+Output is shown in the terminal as well as written to CSV. Output formats can be seen below.
+
 ### Terminal
-I wanted the output formatted in a Private Investigator theme. Here's what the output means in plain English:
+I wanted the terminal output formatted in a Private Investigator theme. Here's what the output means in plain English:
 * "ASSOCIATED WITH ILLICIT ACTIVITY" = Found in at least one confirmed breach
 * "CLEARED OF SUSPICION" = Not found in any confirmed breaches
 * "BAD LEADS" = Errors raised due to misformatted input
@@ -28,6 +45,8 @@ I wanted the output formatted in a Private Investigator theme. Here's what the o
 !['compromised' script terminal screenshot](screenshots/compromised_investigation-output.png)
 
 ### CSV
+The API request to HIBP returns the most recent breach date first for each account. An "x" will be placed in the "Most Recent" column while additional breaches for the same account will not include the "x."
+
 <table>
  <tr>
   <th>Account</th>
